@@ -518,7 +518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: e2d7820bcc1456f4bb7f94ea0fd9108f, type: 2}
+  m_Texture: {fileID: 8400000, guid: f585159327c0ce84b8d7cd0e7bae17f7, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -550,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &179008250
 RectTransform:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 6.377, y: 1.208}
   m_SizeDelta: {x: 59.663, y: 29.404}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1614,7 +1614,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3190,7 +3190,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 64
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: e2d7820bcc1456f4bb7f94ea0fd9108f, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: f585159327c0ce84b8d7cd0e7bae17f7, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
