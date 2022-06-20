@@ -33,8 +33,9 @@ public class TicTacToeManager : MonoBehaviour
             if (EventSystem.current.currentSelectedGameObject.transform.GetChild(0).GetComponent<Text>().text == string.Empty)
             {
                 EventSystem.current.currentSelectedGameObject.transform.GetChild(0).GetComponent<Text>().text = "X";
+                _LockPlay = true;
             }
-            _LockPlay = true;
+            
         }
     }
     void InitGame()
