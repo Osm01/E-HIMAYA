@@ -1,0 +1,68 @@
+.Button-Style {
+    background-color: rgba(0, 68, 255, 255);
+    height: 83px;
+    width: 287px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 42px;
+    -unity-font-style: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    visibility: visible;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.Button-Style:hover {
+    background-color: rgb(38, 55, 103);
+    height: 83px;
+    width: 287px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 42px;
+    -unity-font-style: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    visibility: visible;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.Button-Style:active {
+    background-color: rgb(129, 142, 180);
+    height: 83px;
+    width: 287px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 42px;
+    -unity-font-style: bold;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    visibility: visible;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: flex-start;
+}
