@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scenes/New Folder/GameMenu.unity
+    guid: e72e4ec93485d9d47a711b52dc3bbda4
+  - enabled: 1
+    path: Assets/Scenes/Scenes/connaissance en cybersecurity 1.unity
+    guid: 7c663fceefcf00940b16672d1a15a935
+  - enabled: 1
+    path: Assets/Scenes/Scenes/New Folder/Game.unity
+    guid: a0690b7dc2cffb3488b8788a757ac336
+  - enabled: 1
+    path: Assets/Scenes/Scenes/New Folder/essaie02.unity
+    guid: 3591816a9da9ba64e83785ca636994fd
+  - enabled: 1
+    path: Assets/Scenes/Scenes/La protection des donnees personnelles.unity
+    guid: 9eac4acd900478749819926f0d699c03
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Les reseaux sociaux.unity
+    guid: 0142a5b219a178e46b4fc68e07dab47e
   m_configObjects: {}
