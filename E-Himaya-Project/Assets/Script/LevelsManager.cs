@@ -9,7 +9,7 @@ public class LevelsManager : MonoBehaviour
     private void Awake()
     {
         //
-        int Reachedlevel = PlayerPrefs.GetInt("Level",1);
+        int Reachedlevel = PlayerPrefs.GetInt("Level",0);
         Debug.Log(Reachedlevel);
         for(int i=0;i<Levelbuttons.Length;i++)
         {
