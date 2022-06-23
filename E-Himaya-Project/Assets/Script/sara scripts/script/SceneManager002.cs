@@ -29,7 +29,7 @@ public class SceneManager002 : MonoBehaviour
             else
             {
                 levels[i - 1].transform.GetChild(0).GetComponent<Text>().color = Color.yellow;
-                Destroy(levels[i - 1].GetComponent<Button>());
+               // Destroy(levels[i - 1].GetComponent<Button>());
             }
 
 
