@@ -28,7 +28,10 @@ Transform:
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: -0.26, y: 0.4189685, z: 0}
   m_LocalScale: {x: 1.2514125, y: 0.36717936, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,19 +43,30 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
+<<<<<<< Updated upstream
   serializedVersion: 8
+=======
+  serializedVersion: 7
+>>>>>>> Stashed changes
   lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
+<<<<<<< Updated upstream
   emitterVelocityMode: 0
+=======
+>>>>>>> Stashed changes
   looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
+<<<<<<< Updated upstream
+=======
+  useRigidbodyForVelocity: 1
+>>>>>>> Stashed changes
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -602,7 +616,10 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 10000
+<<<<<<< Updated upstream
     customEmitterVelocity: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4758,7 +4775,10 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -4789,7 +4809,10 @@ ParticleSystemRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
+<<<<<<< Updated upstream
   m_MeshDistribution: 0
+=======
+>>>>>>> Stashed changes
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -4813,8 +4836,11 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+<<<<<<< Updated upstream
   m_MeshWeighting: 1
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+=======
+>>>>>>> Stashed changes
   m_MaskInteraction: 0

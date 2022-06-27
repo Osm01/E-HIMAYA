@@ -98,7 +98,11 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 4890085278179872738, guid: b80a92c541432934390900805be324e5, type: 2}
+=======
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 72297061a9b3d7a45ad9b17add986bcf, type: 2}
+>>>>>>> Stashed changes
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -151,7 +155,10 @@ Transform:
   m_LocalRotation: {x: -0.43932104, y: -0.5584239, z: -0.49104452, w: 0.504019}
   m_LocalPosition: {x: -1.1054826, y: 0.2853856, z: -0.02218628}
   m_LocalScale: {x: 0.23341127, y: 0.23341127, z: 0.23341127}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 967417514}
   m_RootOrder: 0
@@ -167,7 +174,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -236,7 +246,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.8204117, y: -0.8142395, z: 7.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -252,7 +265,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -350,7 +366,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17958832, y: -0.8142395, z: 5.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -366,7 +385,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -464,7 +486,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8204117, y: -0.8142395, z: 7.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -480,7 +505,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -578,7 +606,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17958832, y: -0.8142395, z: 6.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -594,7 +625,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -692,7 +726,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8204117, y: -0.4610927, z: 3.5471249}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children:
   - {fileID: 396117898}
   - {fileID: 1624908780}
@@ -710,7 +747,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -808,7 +848,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.8204117, y: 0.1857605, z: 7.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -824,7 +867,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -922,7 +968,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17958832, y: 0.1857605, z: 6.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -938,7 +987,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1033,7 +1085,10 @@ Transform:
   m_LocalRotation: {x: 0.22734663, y: 0.25550768, z: 0.070065096, w: 0.93708074}
   m_LocalPosition: {x: -6.409823, y: 3.055046, z: -1.3821645}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1130,7 +1185,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.1795883, y: 0.1857605, z: 3.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1146,7 +1204,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1242,7 +1303,10 @@ Transform:
   m_LocalRotation: {x: -0.43932104, y: -0.5584239, z: -0.49104452, w: 0.504019}
   m_LocalPosition: {x: -1.1054826, y: 0.2853856, z: -0.02218628}
   m_LocalScale: {x: 0.23341127, y: 0.23341127, z: 0.23341127}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 967417514}
   m_RootOrder: 1
@@ -1258,7 +1322,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1327,7 +1394,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1795883, y: -0.8142395, z: 7.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1343,7 +1413,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1441,7 +1514,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17958832, y: -0.0738678, z: 0.81885076}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1546,7 +1622,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17958832, y: -1.6427898, z: 10.422928}
   m_LocalScale: {x: 22.173615, y: 0.71512616, z: 40.913822}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1562,7 +1641,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -1641,7 +1723,10 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1692,7 +1777,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.1795883, y: -0.8142395, z: 3.710555}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1708,7 +1796,10 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+<<<<<<< Updated upstream
   m_StaticShadowCaster: 0
+=======
+>>>>>>> Stashed changes
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1

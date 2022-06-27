@@ -98,7 +98,11 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 4890085278179872738, guid: 847e9b2b28a3af1498bc6f10cff042f3, type: 2}
+=======
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 521b045bef4821840a4b3cbc1923e857, type: 2}
+>>>>>>> Stashed changes
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -153,7 +157,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -98,7 +98,11 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 4890085278179872738, guid: be79349305fceca4ab8c05ecc93cb95d, type: 2}
+=======
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 35ea743ce61831d44bd2433c57206f6f, type: 2}
+>>>>>>> Stashed changes
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -338,7 +342,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1589894913}
   m_RootOrder: 1
@@ -432,7 +439,10 @@ Transform:
   m_LocalRotation: {x: 0.39069661, y: 0, z: 0, w: 0.92051953}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1589894913}
   m_RootOrder: 4
@@ -580,7 +590,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1589894913}
   m_RootOrder: 2
@@ -674,7 +687,10 @@ Transform:
   m_LocalRotation: {x: 0.46834725, y: -0.16140407, z: 0.10737535, w: 0.8620152}
   m_LocalPosition: {x: -1.1829255, y: 6.791933, z: -8.546488}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -768,7 +784,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.2720399, y: 4.906624, z: -1.3821645}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children:
   - {fileID: 1681816812}
   - {fileID: 845694184}
@@ -921,7 +940,10 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1589894913}
   m_RootOrder: 0
@@ -1018,7 +1040,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8.789726, z: -20.050507}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1230,7 +1255,10 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< Updated upstream
   m_ConstrainProportionsScale: 0
+=======
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 1589894913}
   m_RootOrder: 3
