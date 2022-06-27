@@ -18,8 +18,11 @@ public class LevelsManager : MonoBehaviour
                 Levelbuttons[i].interactable = false;
             }else
             {
-                //count start from 0 so lock image is second child should be child 1
-                Levelbuttons[i].gameObject.transform.GetChild(1).GetComponent<Image>().gameObject.SetActive(false);
+                //count start from 0 so lock image is second child should be child 2
+                Levelbuttons[i].gameObject.transform.GetChild(2).GetComponent<Image>().sprite=null;
+                var Alphavalue = Levelbuttons[i].gameObject.transform.GetChild(2).GetComponent<Image>().color;
+                Alphavalue.a = 0f;
+                Levelbuttons[i].gameObject.transform.GetChild(2).GetComponent<Image>().color = Alphavalue;
             }
         }
     }
