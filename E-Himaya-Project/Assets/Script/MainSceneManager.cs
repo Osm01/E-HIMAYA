@@ -8,4 +8,8 @@ public class MainSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene(IndexScene);
     }
+    public void Loadpanel(GameObject L_Panel)
+    {
+        L_Panel.SetActive(true);
+    }
 }
