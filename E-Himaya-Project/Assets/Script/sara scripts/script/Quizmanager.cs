@@ -46,7 +46,6 @@ public class Quizmanager : MonoBehaviour
         score += 1;
         QnA.RemoveAt(CurrentQuestion);
         GenerateQuestion();
-      
     }
   public void GameOver()
     {
@@ -76,7 +75,6 @@ public class Quizmanager : MonoBehaviour
             if(QnA[CurrentQuestion].CorrectAnswer == i+1)
             {
                 options[i].GetComponent<AnswerScript001>().isCorrect = true;
-                
             }
             }
     }

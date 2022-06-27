@@ -24,21 +24,19 @@ public class AnswerScript001 : MonoBehaviour
             FillCorrectAnswerLogo(quizmanager.CorrectLogo);
             GetComponent<Image>().color = Color.green;
             yield return new WaitForSeconds(2);
-            Debug.Log("correct");
             quizmanager.Correct();
         }
         else
         {
-            quizmanager.PanelForCorrection.SetActive(true);
             quizmanager.txtCorrection.text = quizmanager.QnA[quizmanager.CurrentQuestion].StringCorrectAnswer;
             FillHeartByAnswer(quizmanager.EmptyHeart);
             FillCorrectAnswerLogo(quizmanager.InCorrect);
             GetComponent<Image>().color = Color.red;
+            yield return new WaitForSeconds(1);
+            quizmanager.PanelForCorrection.SetActive(true);
             yield return new WaitForSeconds(2);
-            Debug.Log("not correct");
             quizmanager.Wrong();
             quizmanager.PanelForCorrection.SetActive(false);
-
         }
         for (int i = 0; i < quizmanager.options.Length; i++)
         {
