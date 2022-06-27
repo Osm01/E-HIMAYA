@@ -69,21 +69,21 @@ public class Quizmanager : MonoBehaviour
     {
         for (int i = 0; i < options.Length; i++)
             {
-<<<<<<< Updated upstream
-           options[i].GetComponent<AnswerScript001>().isCorrect = false;
-=======
-           options[i].GetComponent<AnswerScript>().IsCorrect = false;
->>>>>>> Stashed changes
+            
+            options[i].GetComponent<AnswerScript001>().isCorrect = false;
+
+           //options[i].GetComponent<AnswerScript>().IsCorrect = false;
+
            
 
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[CurrentQuestion].Answers[i];
             if(QnA[CurrentQuestion].CorrectAnswer == i+1)
             {
-<<<<<<< Updated upstream
+
                 options[i].GetComponent<AnswerScript001>().isCorrect = true;
-=======
-                options[i].GetComponent<AnswerScript>().IsCorrect = true;
->>>>>>> Stashed changes
+
+               // options[i].GetComponent<AnswerScript>().IsCorrect = true;
+
                 
             }
             }
