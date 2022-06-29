@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class HomeSceneManager : MonoBehaviour
 {
     [SerializeField] GameObject MainPanel;
@@ -16,6 +16,24 @@ public class HomeSceneManager : MonoBehaviour
         PanelSetting.SetActive(false);
         Quitpanel.SetActive(false);
         QuitDef.SetActive(false);
+    }
+    public void Jouer()
+    {
+        MainPanel.SetActive(false);
+        PanelCategorie.SetActive(true);
+    }
+    public void Back()
+    {
+        MainPanel.SetActive(true);
+        PanelCategorie.SetActive(false);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    public void LoadSceneByIndex(int IndexScene)
+    {
+        SceneManager.LoadScene(IndexScene);
     }
 
 }
