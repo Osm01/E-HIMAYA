@@ -18,11 +18,23 @@ public class TicTacToeManager : MonoBehaviour
     }
     private void Update()
     {
-        if (_LockPlay)
+        if (IsWin("X"))
         {
-            // ClassicAIplay();
-            AI_Play();
+            Debug.Log("X Wining");
+            _LockPlay = true;
         }
+        else if(IsWin("O"))
+        {
+            Debug.Log("O Wining");
+            _LockPlay = true; 
+        } 
+        else if(_LockPlay)
+        { 
+                // ClassicAIplay();
+                //let Ai play 
+                AI_Play();
+        }
+        
     }
     public void PLayerClick()
     {
