@@ -29,11 +29,27 @@ public class HomeSceneManager : MonoBehaviour
     }
     public void Quit()
     {
-        Application.Quit();
+        QuitDef.SetActive(true);
     }
     public void LoadSceneByIndex(int IndexScene)
     {
         SceneManager.LoadScene(IndexScene);
     }
-
+    public void Setting()
+    {
+        PanelSetting.SetActive(true);
+    }
+    public void back2Menu()
+    {
+        PanelSetting.SetActive(false);
+    }
+    public void Yes_QuitDefff()
+    {
+        Debug.Log("yes ");
+        Application.Quit();
+    }
+    public void No_QuitDefff()
+    {
+        QuitDef.SetActive(false);
+    }
 }
