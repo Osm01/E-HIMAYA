@@ -8,6 +8,7 @@ public class AnswerScript001 : MonoBehaviour
    public bool isCorrect = false;
     public Quizmanager quizmanager;
     public Color startColor;
+    int XO = 0;
     private void Start()
     {
        
@@ -42,7 +43,6 @@ public class AnswerScript001 : MonoBehaviour
         {
             quizmanager.options[i].GetComponent<Image>().color = Color.yellow;
         }
-
     }
     void FillCorrectAnswerLogo(Sprite sprite)
     {
