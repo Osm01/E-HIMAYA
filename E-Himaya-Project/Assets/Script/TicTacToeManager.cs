@@ -8,25 +8,33 @@ using System;
 public class TicTacToeManager : MonoBehaviour
 {
     [SerializeField] Button[] bts;
+    Quizmanager quizmanager;
     bool _LockPlay;
     bool _Winner;
     bool _AIPLayed;
     string Winner;
+    public bool XO = true;
     private void Start()
     {
         InitGame();
+        quizmanager = FindObjectOfType<Quizmanager>();
     }
     private void Update()
     {
         if (IsWin("X"))
         {
             Debug.Log("X Wining");
+            quizmanager.ListHearth[quizmanager.ListHearth.Length-1].GetComponent<Image>().sprite = quizmanager.FillHeart;
+            quizmanager.PanelForXO.SetActive(false);
             _LockPlay = true;
+            XO = false;
+            ClearAll();
         }
         else if(IsWin("O"))
         {
             Debug.Log("O Wining");
-            _LockPlay = true; 
+            _LockPlay = true;
+            ClearAll();
         } 
         else if(_LockPlay)
         { 
@@ -302,5 +310,17 @@ public class TicTacToeManager : MonoBehaviour
         }
 
         return VarWinner;
+    }
+    void ClearAll()
+    {
+        bts[0].transform.GetChild(0).GetComponent<Text>().text = string.Empty ;
+        bts[1].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[2].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[3].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[4].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[5].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[6].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[7].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[8].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
     }
     }
