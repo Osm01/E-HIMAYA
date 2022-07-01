@@ -8,6 +8,7 @@ using System;
 public class TicTacToeManager : MonoBehaviour
 {
     [SerializeField] Button[] bts;
+    [SerializeField] GameObject VFX;
     Quizmanager quizmanager;
     bool _LockPlay;
     bool _Winner;
@@ -18,17 +19,14 @@ public class TicTacToeManager : MonoBehaviour
     {
         InitGame();
         quizmanager = FindObjectOfType<Quizmanager>();
+        VFX.SetActive(false);
     }
     private void Update()
     {
         if (IsWin("X"))
         {
-            Debug.Log("X Wining");
-            quizmanager.ListHearth[quizmanager.ListHearth.Length-1].GetComponent<Image>().sprite = quizmanager.FillHeart;
-            quizmanager.PanelForXO.SetActive(false);
-            _LockPlay = true;
-            XO = false;
-            ClearAll();
+            //Activate particle system and fill all heart and desactivate oanel for xo go to quiz panel
+            StartCoroutine(XWin_Action());
         }
         else if(IsWin("O"))
         {
@@ -94,7 +92,6 @@ public class TicTacToeManager : MonoBehaviour
         Debug.Log("best position " + bestspot + " with a score of " + BestScore);
         _LockPlay = false;
     }
-
     private float MiniMax(Button[] bts,bool IsMax)
     {
         float Score = CheckWinner();
@@ -134,7 +131,6 @@ public class TicTacToeManager : MonoBehaviour
         return Score;
 
     }
-
     bool IsWin(string isWinning)
     {
         bool _Winner = false;
@@ -322,5 +318,19 @@ public class TicTacToeManager : MonoBehaviour
         bts[6].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
         bts[7].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
         bts[8].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+    }
+    IEnumerator XWin_Action()
+    {
+        for(int i=0;i< quizmanager.ListHearth.Length;i++)
+        {
+            quizmanager.ListHearth[i].GetComponent<Image>().sprite = quizmanager.FillHeart;
+        }
+        _LockPlay = true;
+        XO = false;
+        VFX.SetActive(true);
+        yield return new WaitForSeconds(6f);
+        quizmanager.PanelForXO.SetActive(false);
+        VFX.SetActive(false);
+        ClearAll();
     }
     }

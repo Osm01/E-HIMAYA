@@ -35,7 +35,7 @@ public class AnswerScript001 : MonoBehaviour
             GetComponent<Image>().color = Color.red;
             yield return new WaitForSeconds(1);
             quizmanager.PanelForCorrection.SetActive(true);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             quizmanager.Wrong();
             quizmanager.PanelForCorrection.SetActive(false);
         }
