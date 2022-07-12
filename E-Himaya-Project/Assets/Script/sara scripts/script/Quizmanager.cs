@@ -23,9 +23,13 @@ public class Quizmanager : MonoBehaviour
     public Sprite FillHeart;
     public Sprite EmptyHeart;
     public GameObject PanelForCorrection;
+    public GameObject PanelForXO;
     public Text txtCorrection;
+    public int XO_Show = 0;
+    TicTacToeManager ticTac;
     private void Start()
     {
+        ticTac = FindObjectOfType<TicTacToeManager>();
         GenerateQuestion();
         TotalQuestions = QnA.Count;
         GoPanel.SetActive(false);
@@ -61,21 +65,33 @@ public class Quizmanager : MonoBehaviour
     }
     public void Wrong()
     {
+        XO_Show++;
+        if(XO_Show>=3 && ticTac.XO)
+        {
+            PanelForXO.SetActive(true);
+        }
         QnA.RemoveAt(CurrentQuestion);
         GenerateQuestion();
-
     }
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
             {
-           options[i].GetComponent<AnswerScript001>().isCorrect = false;
+            
+            options[i].GetComponent<AnswerScript001>().isCorrect = false;
+
+           //options[i].GetComponent<AnswerScript>().IsCorrect = false;
+
            
 
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[CurrentQuestion].Answers[i];
             if(QnA[CurrentQuestion].CorrectAnswer == i+1)
             {
+
                 options[i].GetComponent<AnswerScript001>().isCorrect = true;
+
+               // options[i].GetComponent<AnswerScript>().IsCorrect = true;
+
                 
             }
             }
