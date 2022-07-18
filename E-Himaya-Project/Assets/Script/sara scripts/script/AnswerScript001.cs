@@ -8,6 +8,7 @@ public class AnswerScript001 : MonoBehaviour
    public bool isCorrect = false;
     public Quizmanager quizmanager;
     public Color startColor;
+    int XO = 0;
     private void Start()
     {
        
@@ -24,27 +25,24 @@ public class AnswerScript001 : MonoBehaviour
             FillCorrectAnswerLogo(quizmanager.CorrectLogo);
             GetComponent<Image>().color = Color.green;
             yield return new WaitForSeconds(2);
-            Debug.Log("correct");
             quizmanager.Correct();
         }
         else
         {
-            quizmanager.PanelForCorrection.SetActive(true);
             quizmanager.txtCorrection.text = quizmanager.QnA[quizmanager.CurrentQuestion].StringCorrectAnswer;
             FillHeartByAnswer(quizmanager.EmptyHeart);
             FillCorrectAnswerLogo(quizmanager.InCorrect);
             GetComponent<Image>().color = Color.red;
-            yield return new WaitForSeconds(2);
-            Debug.Log("not correct");
+            yield return new WaitForSeconds(1);
+            quizmanager.PanelForCorrection.SetActive(true);
+            yield return new WaitForSeconds(1);
             quizmanager.Wrong();
             quizmanager.PanelForCorrection.SetActive(false);
-
         }
         for (int i = 0; i < quizmanager.options.Length; i++)
         {
             quizmanager.options[i].GetComponent<Image>().color = Color.yellow;
         }
-
     }
     void FillCorrectAnswerLogo(Sprite sprite)
     {
