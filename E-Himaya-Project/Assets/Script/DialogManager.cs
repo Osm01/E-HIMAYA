@@ -31,6 +31,7 @@ public class DialogManager : MonoBehaviour
         IndexWrite = 0;
         SwitchCanvas = false;
         QuestionCanvas.SetActive(false);
+       
     }
     void Writer( Text S, string txt )
     {
@@ -153,7 +154,6 @@ public class DialogManager : MonoBehaviour
         {
             if (currentSentence <= dialog[currentDialog].Sentences.Length - 1)
             {
-                Debug.Log(ImageChar.GetComponent<RectTransform>().sizeDelta);
                 if (dialog[currentDialog].Name == "Nabih")
                 {
                     ImageChar.texture = T_Nabih;
