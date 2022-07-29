@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Cinemachine;
 public class DialogManager : MonoBehaviour
 {
+    [SerializeField] Renderer NabihRender;
     [SerializeField] Dialog[] dialog;
     [SerializeField] Text PlaceTitle;
     [SerializeField] Text PlaceSentence;
@@ -16,7 +17,11 @@ public class DialogManager : MonoBehaviour
     [SerializeField] Texture T_Omar;
     [SerializeField] GameObject DialogCanvas;
     [SerializeField] GameObject QuestionCanvas;
+    [SerializeField] ParticleSystem sparkleParticle;
+    [SerializeField] Animator NabihAnimatorController;
     bool SwitchCanvas;
+    // is press for make sure not get error if player press multiple time in screen
+    bool isPress;
     int currentDialog;
     int currentSentence;
     int currentAudio;
@@ -31,7 +36,9 @@ public class DialogManager : MonoBehaviour
         IndexWrite = 0;
         SwitchCanvas = false;
         QuestionCanvas.SetActive(false);
-       
+        isPress = false;
+        //set default tiling value to nabih face expression
+        NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f,1.74f));
     }
     void Writer( Text S, string txt )
     {
@@ -44,15 +51,17 @@ public class DialogManager : MonoBehaviour
         {
             DialogLogicFunct();
         }
-        else if (Vcam3.Priority==12 && Input.GetKeyDown(KeyCode.Space))
+        else if (Vcam3.Priority == 12 && Input.GetKeyDown(KeyCode.Space) && isPress == false)
         {
+            isPress = true;
             StartCoroutine(DialogLogicFunctWithPress());
         }
-        if(SwitchCanvas)
+        if (SwitchCanvas)
         {
             DialogCanvas.SetActive(false);
             QuestionCanvas.SetActive(true);
         }
+        Debug.Log(isPress);
     }
     void AudioMangerMethod()
     {
@@ -75,7 +84,7 @@ public class DialogManager : MonoBehaviour
             // Second audio 
             if (!audioSource.isPlaying && currentDialog == 1 && currentSentence == 0)
             {
-                if (currentAudio != 1)
+                if (currentAudio != +1)
                 {
 
                     return;
@@ -158,12 +167,17 @@ public class DialogManager : MonoBehaviour
                 {
                     ImageChar.texture = T_Nabih;
                     ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(250, 350);
+                    NabihAnimatorController.SetBool("Explain", true);
                 }
                 else
                 {
                     ImageChar.texture = T_Omar;
                     ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 400);
                 }
+                if (currentDialog == 1)
+                {
+                    sparkleParticle.Play();
+                }  
                 do
                 {
                     AudioMangerMethod();
@@ -174,6 +188,7 @@ public class DialogManager : MonoBehaviour
                 } while (IndexWrite <= dialog[currentDialog].Sentences[currentSentence].Length - 1);
                 currentSentence++;
                 IndexWrite = 0;
+                NabihAnimatorController.SetBool("Explain", false);
             }
             else
             {
@@ -181,11 +196,12 @@ public class DialogManager : MonoBehaviour
                 currentDialog++;
             }
 
-        }else
+        }
+        else
         {
             SwitchCanvas = true;
         }
-
+        isPress = false;
     }
 }
 
