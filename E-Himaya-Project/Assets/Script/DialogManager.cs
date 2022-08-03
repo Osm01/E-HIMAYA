@@ -38,7 +38,7 @@ public class DialogManager : MonoBehaviour
         QuestionCanvas.SetActive(false);
         isPress = false;
         //set default tiling value to nabih face expression
-        NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f,1.74f));
+        NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
     }
     void Writer( Text S, string txt )
     {
@@ -51,7 +51,7 @@ public class DialogManager : MonoBehaviour
         {
             DialogLogicFunct();
         }
-        else if (Vcam3.Priority == 12 && Input.GetKeyDown(KeyCode.Space) && isPress == false)
+        else if (Vcam3.Priority == 12 && Input.touchCount > 0 && isPress == false)
         {
             isPress = true;
             StartCoroutine(DialogLogicFunctWithPress());
@@ -177,7 +177,7 @@ public class DialogManager : MonoBehaviour
                 if (currentDialog == 1)
                 {
                     sparkleParticle.Play();
-                }  
+                }
                 do
                 {
                     AudioMangerMethod();

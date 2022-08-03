@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
-
+using UnityEngine.SceneManagement;
 public class TicTacToeManager : MonoBehaviour
 {
     [SerializeField] Button[] bts;
@@ -15,6 +15,7 @@ public class TicTacToeManager : MonoBehaviour
     bool _AIPLayed;
     string Winner;
     public bool XO = true;
+    bool IsDrawing = false;
     private void Start()
     {
         InitGame();
@@ -23,24 +24,46 @@ public class TicTacToeManager : MonoBehaviour
     }
     private void Update()
     {
+
         if (IsWin("X"))
         {
             //Activate particle system and fill all heart and desactivate oanel for xo go to quiz panel
             StartCoroutine(XWin_Action());
         }
-        else if(IsWin("O"))
+        else if (IsWin("O"))
         {
-            Debug.Log("O Wining");
-            _LockPlay = true;
             ClearAll();
-        } 
-        else if(_LockPlay)
-        { 
-                // ClassicAIplay();
-                //let Ai play 
-                AI_Play();
+            _LockPlay = false;
+            SceneManager.LoadScene(4);
+            //should return to main menu to restart game
         }
-        
+        else if (_LockPlay)
+        {
+            // ClassicAIplay();
+            //let Ai play 
+            AI_Play();
+            _LockPlay = false;
+        }
+        else
+        {
+            for (int i = 0; i < bts.Length; i++)
+            {
+                if (bts[i].transform.GetChild(0).GetComponent<Text>().text == string.Empty)
+                {
+                    return;
+                }
+                else
+                {
+                    IsDrawing = true;
+                }
+            }
+            if (IsDrawing)
+            {
+                Debug.LogWarning("OKKKKKKKKKK Draw");
+            }
+        }
+
+
     }
     public void PLayerClick()
     {
@@ -53,19 +76,19 @@ public class TicTacToeManager : MonoBehaviour
                 EventSystem.current.currentSelectedGameObject.transform.GetChild(0).GetComponent<Text>().text = "X";
                 _LockPlay = true;
             }
-            
+
         }
     }
     void InitGame()
     {
-      _LockPlay = false;
+        _LockPlay = false;
         Winner = string.Empty;
         _Winner = false;
         _AIPLayed = false;
-      for (int i = 0; i < bts.Length; i++)
-      {
-         bts[i].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
-      }
+        for (int i = 0; i < bts.Length; i++)
+        {
+            bts[i].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        }
     }
     void AI_Play()
     {
@@ -77,8 +100,8 @@ public class TicTacToeManager : MonoBehaviour
             if (bts[i].transform.GetChild(0).GetComponent<Text>().text == string.Empty)
             {
                 bts[i].transform.GetChild(0).GetComponent<Text>().text = "O";
-                Move = MiniMax(bts,false);
-               // Debug.Log("IS :"+Move);
+                Move = MiniMax(bts, false);
+                // Debug.Log("IS :"+Move);
                 bts[i].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
                 if (Move > BestScore)
                 {
@@ -92,7 +115,7 @@ public class TicTacToeManager : MonoBehaviour
         Debug.Log("best position " + bestspot + " with a score of " + BestScore);
         _LockPlay = false;
     }
-    private float MiniMax(Button[] bts,bool IsMax)
+    private float MiniMax( Button[] bts, bool IsMax )
     {
         float Score = CheckWinner();
         float BestScore = 0f;
@@ -116,7 +139,7 @@ public class TicTacToeManager : MonoBehaviour
         }
         else
         {
-             BestScore = Mathf.Infinity;
+            BestScore = Mathf.Infinity;
             for (int i = 0; i < bts.Length; i++)
             {
                 if (bts[i].transform.GetChild(0).GetComponent<Text>().text == string.Empty)
@@ -131,7 +154,7 @@ public class TicTacToeManager : MonoBehaviour
         return Score;
 
     }
-    bool IsWin(string isWinning)
+    bool IsWin( string isWinning )
     {
         bool _Winner = false;
         string bt0 = bts[0].transform.GetChild(0).GetComponent<Text>().text;
@@ -144,7 +167,7 @@ public class TicTacToeManager : MonoBehaviour
         string bt7 = bts[7].transform.GetChild(0).GetComponent<Text>().text;
         string bt8 = bts[8].transform.GetChild(0).GetComponent<Text>().text;
 
-        if (bt0==bt1 && bt1==bt2 && bt2==isWinning)
+        if (bt0 == bt1 && bt1 == bt2 && bt2 == isWinning)
         {
             _Winner = true;
         }
@@ -309,19 +332,19 @@ public class TicTacToeManager : MonoBehaviour
     }
     void ClearAll()
     {
-        bts[0].transform.GetChild(0).GetComponent<Text>().text = string.Empty ;
-        bts[1].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[2].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[3].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[4].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[5].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[6].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[7].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
-        bts[8].transform.GetChild(0).GetComponent<Text>().text= string.Empty;
+        bts[0].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[1].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[2].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[3].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[4].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[5].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[6].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[7].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
+        bts[8].transform.GetChild(0).GetComponent<Text>().text = string.Empty;
     }
     IEnumerator XWin_Action()
     {
-        for(int i=0;i< quizmanager.ListHearth.Length;i++)
+        for (int i = 0; i < quizmanager.ListHearth.Length; i++)
         {
             quizmanager.ListHearth[i].GetComponent<Image>().sprite = quizmanager.FillHeart;
         }
@@ -333,4 +356,5 @@ public class TicTacToeManager : MonoBehaviour
         VFX.SetActive(false);
         ClearAll();
     }
-    }
+
+}
