@@ -34,7 +34,8 @@ public class TicTacToeManager : MonoBehaviour
         {
             ClearAll();
             _LockPlay = false;
-            SceneManager.LoadScene(4);
+            quizmanager.PanelGameOver.SetActive(true);
+            quizmanager.PanelForXO.SetActive(false);
             //should return to main menu to restart game
         }
         else if (_LockPlay)
