@@ -9,6 +9,7 @@ public class HomeSceneManager : MonoBehaviour
     [SerializeField] GameObject PanelSetting;
     [SerializeField] GameObject Quitpanel;
     [SerializeField] GameObject QuitDef;
+    [SerializeField] Animator NabihAnimator;
     void Start()
     {
         MainPanel.SetActive(true);
@@ -19,8 +20,7 @@ public class HomeSceneManager : MonoBehaviour
     }
     public void Jouer()
     {
-        MainPanel.SetActive(false);
-        PanelCategorie.SetActive(true);
+        StartCoroutine(PlayAnimationNabih());
     }
     public void Back()
     {
@@ -51,5 +51,13 @@ public class HomeSceneManager : MonoBehaviour
     public void No_QuitDefff()
     {
         QuitDef.SetActive(false);
+    }
+    IEnumerator PlayAnimationNabih()
+    {
+        NabihAnimator.CrossFade("mixamo_com", 0.1f);
+        yield return new WaitForSeconds(3f);
+        NabihAnimator.SetBool("Play", false);
+        MainPanel.SetActive(false);
+        PanelCategorie.SetActive(true);
     }
 }
