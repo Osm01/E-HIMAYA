@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UICharacterSelect : MonoBehaviour
 {
     [SerializeField] Image BorderBoy;
@@ -12,6 +13,8 @@ public class UICharacterSelect : MonoBehaviour
     [SerializeField] Animator BoyAnimator;
     [SerializeField] GameObject Girl;
     [SerializeField] Animator GirlAnimator;
+    // IndexSelectCharacter ==> 0 is for Boy and 1 for Girl
+    public static int IndexSelectCharacter=-1;
     bool isPressedGender;
     private void Start()
     {
@@ -29,6 +32,7 @@ public class UICharacterSelect : MonoBehaviour
                 BorderBoy.color = colorBorderBoy;
                 Boy.SetActive(true);
                 BoyAnimator.Play(0);
+                IndexSelectCharacter = 0;
                 //in case not active both girl and boy
                 if(Girl.active)
                 {
@@ -39,6 +43,7 @@ public class UICharacterSelect : MonoBehaviour
             }
             else
             {
+                IndexSelectCharacter = 1;
                 colorBordergirl.a = 255f;
                 BorderGirl.color = colorBordergirl;
                 Girl.SetActive(true);
@@ -68,10 +73,10 @@ public class UICharacterSelect : MonoBehaviour
     }
     public void PlayGame()
     {
-        if(Boy.active || Girl.active)
+        if((Boy.active || Girl.active) && IndexSelectCharacter != -1)
         {
-            //switch to library 
-            Debug.Log("Play");
+            //switch to library index of library is :5
+            SceneManager.LoadScene(5);
         }else
         {
             Debug.Log("Not Play");
