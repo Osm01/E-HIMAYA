@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class HomeSceneManager : MonoBehaviour
 {
     [SerializeField] GameObject MainPanel;
@@ -9,6 +10,7 @@ public class HomeSceneManager : MonoBehaviour
     [SerializeField] GameObject PanelSetting;
     [SerializeField] GameObject Quitpanel;
     [SerializeField] GameObject QuitDef;
+    [SerializeField] GameObject QuestionCanvas;
     [SerializeField] Animator NabihAnimator;
     void Start()
     {
@@ -17,6 +19,7 @@ public class HomeSceneManager : MonoBehaviour
         PanelSetting.SetActive(false);
         Quitpanel.SetActive(false);
         QuitDef.SetActive(false);
+        QuestionCanvas.SetActive(false);
     }
     public void Jouer()
     {
@@ -55,9 +58,20 @@ public class HomeSceneManager : MonoBehaviour
     IEnumerator PlayAnimationNabih()
     {
         NabihAnimator.CrossFade("mixamo_com", 0.1f);
-        yield return new WaitForSeconds(3f);
+        NabihAnimator.SetBool("Play", true);
+        QuestionCanvas.SetActive(true);
+        yield return new WaitForSeconds(2f);
         NabihAnimator.SetBool("Play", false);
-        MainPanel.SetActive(false);
+    }
+    public void NegativeNineStat()
+    {
+        // load scene character select scene
+         Debug.Log("Should load scene select character");
+        //UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color = Color.green;
+    }
+    public void PositiveNineStat()
+    {
+        // load menu of categorys quiz
         PanelCategorie.SetActive(true);
     }
 }

@@ -5,14 +5,27 @@ using UnityEngine.UI;
 [SerializeField]
 public class AnswerScript001 : MonoBehaviour
 {
-   public bool isCorrect = false;
+    public bool isCorrect = false;
     public Quizmanager quizmanager;
     public Color startColor;
     int XO = 0;
+
     private void Start()
     {
-       
+
         startColor = GetComponent<Image>().color;
+    }
+    private void Update()
+    {
+
+        if (quizmanager.PanelForCorrection.active)
+        {
+            if (Input.touchCount > 0)
+            {
+                quizmanager.Wrong();
+                quizmanager.PanelForCorrection.SetActive(false);
+            }
+        }
     }
     public void Answer()
     {
@@ -35,16 +48,15 @@ public class AnswerScript001 : MonoBehaviour
             GetComponent<Image>().color = Color.red;
             yield return new WaitForSeconds(1);
             quizmanager.PanelForCorrection.SetActive(true);
-            yield return new WaitForSeconds(1);
-            quizmanager.Wrong();
-            quizmanager.PanelForCorrection.SetActive(false);
+            // yield return new WaitForSeconds(1);
+
         }
         for (int i = 0; i < quizmanager.options.Length; i++)
         {
             quizmanager.options[i].GetComponent<Image>().color = Color.yellow;
         }
     }
-    void FillCorrectAnswerLogo(Sprite sprite)
+    void FillCorrectAnswerLogo( Sprite sprite )
     {
         for (int i = 0; i < quizmanager.ListCorrectPos.Length; i++)
         {
@@ -59,7 +71,7 @@ public class AnswerScript001 : MonoBehaviour
         }
 
     }
-    void FillHeartByAnswer(Sprite sprite)
+    void FillHeartByAnswer( Sprite sprite )
     {
         for (int i = 0; i < quizmanager.ListCorrectPos.Length; i++)
         {
