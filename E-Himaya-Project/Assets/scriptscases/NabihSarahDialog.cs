@@ -40,7 +40,7 @@ public class NabihSarahDialog : MonoBehaviour
         QuestionCanvas.SetActive(false);
         isPress = false;
         //set default tiling value to nabih face expression
-        NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
+       // NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
         riggingClass = FindObjectOfType<AnimationRigging>();
     }
     void Writer(Text S, string txt)
@@ -64,7 +64,7 @@ public class NabihSarahDialog : MonoBehaviour
             DialogCanvas.SetActive(false);
             QuestionCanvas.SetActive(true);
         }
-        Debug.Log("HERE:"+riggingClass.ActiveQts);
+       // Debug.Log("HERE:"+riggingClass.ActiveQts);
     }
     void AudioMangerMethod()
     {
@@ -215,13 +215,13 @@ public class NabihSarahDialog : MonoBehaviour
                 if (dialog[currentDialog].Name == "Nabih")
                 {
                     ImageChar.texture = T_Nabih;
-                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(250, 350);
+                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(200, 300);
                     NabihAnimatorController.SetBool("Explain", true);
                 }
                 else
                 {
                     ImageChar.texture = T_Omar;
-                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 400);
+                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(250, 350);
                 }
                 if (currentDialog == 1)
                 {
@@ -250,6 +250,7 @@ public class NabihSarahDialog : MonoBehaviour
         {
             riggingClass.ActiveQts = true;
             SwitchCanvas = true;
+            Debug.Log("Im here and switch canvas is " + SwitchCanvas);
         }
         isPress = false;
     }

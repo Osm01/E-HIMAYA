@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class NabihQST : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class NabihQST : MonoBehaviour
     [SerializeField]
     MultiAimConstraint _MultiAimConstraint ;
     [SerializeField] ParticleSystem RainParticleSystem;
-    //[SerializeField] ParticleSystem ThinkParticleSystem;
-    // first clip for correct answer sound and second for wrong sound effect
+    [SerializeField] ParticleSystem ThinkParticleSystem;
+     //first clip for correct answer sound and second for wrong sound effect
     [SerializeField] AudioClip[] audioClips;
     bool IsCorrect;
     int currentQuestion;
@@ -39,8 +40,8 @@ public class NabihQST : MonoBehaviour
        
             if (currentQuestion < Qts.Length && currentQuestion == indexquestion)
             {
-                //animator.CrossFade("ThinkingIdle", 0.1f);
-              //  ThinkParticleSystem.Play();
+              // animator.CrossFade("ThinkingIdle", 0.1f);
+                ThinkParticleSystem.Play();
                 FillQuestionAnswers();
                 indexquestion++;
             }
@@ -99,7 +100,7 @@ public class NabihQST : MonoBehaviour
             NabihAnimator.CrossFade("NoNqbih", 0.1f);
             NabihAnimator.SetBool("No", true);*/
             //NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.83f, 2.12f));
-           RainParticleSystem.Play();
+           //RainParticleSystem.Play();
             audioSource.PlayOneShot(audioClips[1]);
         }
         yield return new WaitForSeconds(4);
@@ -118,6 +119,7 @@ public class NabihQST : MonoBehaviour
         if (currentQuestion == Qts.Length)
         {
             //End Game Here .......
+            SceneManager.LoadScene(5);
             Debug.Log("Heello");
         }
     }
