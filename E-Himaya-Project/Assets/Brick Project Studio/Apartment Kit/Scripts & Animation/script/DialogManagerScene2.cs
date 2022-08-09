@@ -20,6 +20,8 @@ public class DialogManagerScene2 : MonoBehaviour
     [SerializeField] Texture T_Nada;
     [SerializeField] GameObject DialogCanvas;
     [SerializeField] GameObject QuestionCanvas;
+    [SerializeField] GameObject Nabih;
+    public Animator Girlanimator;
     //[SerializeField] Animator NabihAnimatorController;
     public bool SwitchCanvas;
     // is press for make sure not get error if player press multiple time in screen
@@ -31,6 +33,8 @@ public class DialogManagerScene2 : MonoBehaviour
     float _timer = 0;
     private void Start()
     {
+        Debug.Log("Haùza");
+        //Nabih.SetActive(false);
         // init values
         currentAudio = 0;
         currentSentence = 0;
@@ -39,8 +43,9 @@ public class DialogManagerScene2 : MonoBehaviour
         SwitchCanvas = false;
         QuestionCanvas.SetActive(false);
         isPress = false;
+       
         //set default tiling value to nabih face expression
-       // NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
+        // NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
     }
     void Writer(Text S, string txt)
     {
@@ -62,18 +67,17 @@ public class DialogManagerScene2 : MonoBehaviour
         if (currentDialog <= 0 && Vcam4.Priority == 14)
         {
             DialogLogicFunct();
-            Debug.Log("1234qwehggggggg");
         }
-        else if (Vcam4.Priority == 14 && Input.GetKeyDown(KeyCode.Space) && isPress == false)
+        else if (Vcam4.Priority == 14 && Input.touchCount > 0 && isPress == false)
         {
             isPress = true;
             StartCoroutine(DialogLogicFunctWithPress());
-            Debug.Log("1234qwe");
         }
         if (SwitchCanvas)
         {
             DialogCanvas.SetActive(false);
             QuestionCanvas.SetActive(true);
+        
         }
     }
     void AudioMangerMethod()
@@ -161,7 +165,15 @@ public class DialogManagerScene2 : MonoBehaviour
                 }
                 else
                 {
-                    currentDialog++;
+                    if (Vcam4.Priority != 14)
+                    {
+                        currentDialog++;
+                    }
+                    else
+                    {
+                        DialogCanvas.SetActive(false);
+                    }
+                    
                     currentSentence = 0;
                     IndexWrite = 0;
                 }
@@ -176,6 +188,11 @@ public class DialogManagerScene2 : MonoBehaviour
         {
             if (currentSentence <= dialog[currentDialog].Sentencess.Length - 1)
             {
+                if (currentDialog == 1)
+                {
+                    Girlanimator.CrossFade("Praying", 0.1f);
+                    Girlanimator.SetBool("ask", true);
+                }
                 if (dialog[currentDialog].Namee == "Nabih")
                 {
                     ImageChar.texture = T_Nabih;
@@ -185,7 +202,7 @@ public class DialogManagerScene2 : MonoBehaviour
                 else if(dialog[currentDialog].Namee == "Nada")
                 {
                     ImageChar.texture = T_Nada;
-                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 400);
+                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 335);
                 }else
                 {
                     ImageChar.texture = T_Ahmed;
@@ -213,7 +230,14 @@ public class DialogManagerScene2 : MonoBehaviour
         {
             currentDialog = 0;
             currentSentence = 0;
-            SwitchCanvas = true;
+            if(Vcam4.Priority!=14)
+            {
+                SwitchCanvas = true;
+            }else
+            {
+                DialogCanvas.SetActive(false);
+            }
+            
         }
         isPress = false;
     }

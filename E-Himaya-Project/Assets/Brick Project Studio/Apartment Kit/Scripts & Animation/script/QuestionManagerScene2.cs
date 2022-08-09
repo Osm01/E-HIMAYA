@@ -8,10 +8,11 @@ public class QuestionManagerScene2 : MonoBehaviour
     [SerializeField] QuestionScene2[] Qts;
     [SerializeField] Text PlaceQuestion;
     [SerializeField] Button[] Answers;
-    //[SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
     [SerializeField] MultiAimConstraint _MultiAimConstraint;
     [SerializeField] GameObject Dialog1Canvas;
     [SerializeField] GameObject QuestionCanvas;
+    [SerializeField] GameObject Nabih;
     //[SerializeField] ParticleSystem RainParticleSystem;
     //[SerializeField] ParticleSystem ThinkParticleSystem;
     // first clip for correct answer sound and second for wrong sound effect
@@ -26,7 +27,7 @@ public class QuestionManagerScene2 : MonoBehaviour
     BoyLooking boyLooking;
     private void Start()
     {
-      
+        Nabih.SetActive(false);
         currentQuestion = 0;
         indexquestion = 0;
         IsCorrect = false;
@@ -90,7 +91,11 @@ public class QuestionManagerScene2 : MonoBehaviour
            // animator.CrossFade("Happy Idle", 0.1f);
            // animator.SetBool("Correct", true);
            // NabihRender.material.SetTextureScale("_MainTex", new Vector2(1.6f, 1.75f));
-           // audioSource.PlayOneShot(audioClips[0]);
+          audioSource.PlayOneShot(audioClips[0]);
+            managerScene2.Girlanimator.CrossFade("Excited", 0.1f);
+            managerScene2.Girlanimator.SetBool("excited", true);
+
+
         }
         else
         {
@@ -99,12 +104,18 @@ public class QuestionManagerScene2 : MonoBehaviour
             //animator.SetBool("Incorrect", true);
           //  NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.83f, 2.12f));
            // RainParticleSystem.Play();
-           // audioSource.PlayOneShot(audioClips[1]);
+           audioSource.PlayOneShot(audioClips[1]);
+            managerScene2.Girlanimator.CrossFade("Crying", 0.1f);
+            managerScene2.Girlanimator.SetBool("Cry", true);
         }
         yield return new WaitForSeconds(4);
-       // animator.SetBool("Correct", false);
-       // animator.SetBool("Incorrect", false);
-       // NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
+        managerScene2.Girlanimator.SetBool("excited", false);
+        managerScene2.Girlanimator.SetBool("Cry", false);
+        managerScene2.Girlanimator.SetBool("ask", false);
+        managerScene2.Girlanimator.CrossFade("Standing Idle", 0.1f);
+        // animator.SetBool("Correct", false);
+        // animator.SetBool("Incorrect", false);
+        // NabihRender.material.SetTextureScale("_MainTex", new Vector2(2.8f, 1.74f));
         // after 4 second reset every thing for next question 
         currentQuestion++;
         for (int i = 0; i < Answers.Length; i++)
@@ -119,6 +130,9 @@ public class QuestionManagerScene2 : MonoBehaviour
             managerScene2.SwitchCanvas = false;
             Dialog1Canvas.SetActive(true);
             QuestionCanvas.SetActive(false);
+            Nabih.SetActive(true);
+            //Debug.LogError("oum");
+            //Debug.LogError(Nabih.active.ToString());
         }
     }
 }
