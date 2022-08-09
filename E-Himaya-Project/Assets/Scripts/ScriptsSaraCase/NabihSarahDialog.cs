@@ -175,7 +175,7 @@ public class NabihSarahDialog : MonoBehaviour
     }
     void DialogLogicFunct()
     {
-        if (Time.time > _timer)
+        if (Time.timeSinceLevelLoad > _timer)
         {
             if (currentDialog <= dialog.Length - 1)
             {
@@ -212,16 +212,17 @@ public class NabihSarahDialog : MonoBehaviour
         {
             if (currentSentence <= dialog[currentDialog].Sentences.Length - 1)
             {
+                
                 if (dialog[currentDialog].Name == "Nabih")
                 {
                     ImageChar.texture = T_Nabih;
-                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(200, 300);
+                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(41, 60);
                     NabihAnimatorController.SetBool("Explain", true);
                 }
                 else
                 {
                     ImageChar.texture = T_Omar;
-                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(250, 350);
+                    ImageChar.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 70);
                 }
                 if (currentDialog == 1)
                 {

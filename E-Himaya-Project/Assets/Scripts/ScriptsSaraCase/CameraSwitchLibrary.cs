@@ -39,7 +39,7 @@ public class CameraSwitchLibrary : MonoBehaviour
                 return;
             }
             Debug.Log("Im here");
-            if (Time.time >= 30.17f && Time.time < 74.12f)
+            if (Time.time >= 15f && Time.time < 40f)
             {
                 CanvasDialog.SetActive(true);
                 ShowOneTime++;

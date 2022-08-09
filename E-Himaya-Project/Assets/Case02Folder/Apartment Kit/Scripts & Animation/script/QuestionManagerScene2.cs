@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.SceneManagement;
 public class QuestionManagerScene2 : MonoBehaviour
 {
     [SerializeField] QuestionScene2[] Qts;
@@ -133,6 +134,7 @@ public class QuestionManagerScene2 : MonoBehaviour
             Nabih.SetActive(true);
             //Debug.LogError("oum");
             //Debug.LogError(Nabih.active.ToString());
+            SceneManager.LoadScene(4);
         }
     }
 }

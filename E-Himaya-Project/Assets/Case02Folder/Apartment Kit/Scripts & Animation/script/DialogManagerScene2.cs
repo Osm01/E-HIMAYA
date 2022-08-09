@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+
 public class DialogManagerScene2 : MonoBehaviour
 {
     //[SerializeField] Renderer NabihRender;
@@ -143,7 +144,7 @@ public class DialogManagerScene2 : MonoBehaviour
     }
     void DialogLogicFunct()
     {
-        if (Time.time > _timer)
+        if (Time.timeSinceLevelLoad > _timer)
         {
             if (currentDialog <= dialog.Length - 1)
             {
@@ -240,5 +241,7 @@ public class DialogManagerScene2 : MonoBehaviour
             
         }
         isPress = false;
+        
     }
+    
 }

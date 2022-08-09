@@ -62,11 +62,12 @@ public class RotateCamera : MonoBehaviour
             if(Cam1.transform.eulerAngles.y > 358f)
             {
                 switchCAM2 = true;
-                yield return new WaitForSeconds(17.75f);
+                yield return new WaitForSeconds(15f);
                 switchCAM3 = true;
                 yield return new WaitForSeconds(50f);
             }
         }
+        
     }
 }
 

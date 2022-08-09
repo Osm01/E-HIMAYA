@@ -27,9 +27,9 @@ public class TransitionCameras : MonoBehaviour
         }
         if(switchCam3)
         {
-            if(_timer < Time.time)
+            if(_timer < Time.timeSinceLevelLoad)
             {
-                _timer = Time.time + 5;
+                _timer = Time.timeSinceLevelLoad + 5;
                 inex += 1;
                 if(inex > 1)
                 {

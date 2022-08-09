@@ -6295,7 +6295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &338462311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,6 +6329,8 @@ MonoBehaviour:
   Answers:
   - {fileID: 1159315590}
   - {fileID: 2030114677}
+  animator: {fileID: 1011462048}
+  NabihAnimator: {fileID: 1011462048}
   audioSource: {fileID: 682552582}
   _MultiAimConstraint: {fileID: 346628726}
   RainParticleSystem: {fileID: 1767330181}
@@ -6336,6 +6338,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 6adfdbd364a6e4e448af1fe43c9e7f23, type: 3}
   - {fileID: 8300000, guid: 00f4e5382064f73449d0be44a75ba68d, type: 3}
+  NabihAnimatorController: {fileID: 1011462048}
 --- !u!114 &338462312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14383,7 +14386,7 @@ GameObject:
   - component: {fileID: 923247895}
   - component: {fileID: 923247894}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SkyRotate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14406,6 +14409,7 @@ MonoBehaviour:
   switchCAM2: 0
   switchCAM3: 0
   switchCAM4: 0
+  Cam1: {fileID: 0}
 --- !u!4 &923247895
 Transform:
   m_ObjectHideFlags: 0
@@ -16515,19 +16519,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441762591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.054228507, z: -0, w: 0.9985286}
+  m_LocalPosition: {x: 0, y: 0, z: 8.5812235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1733665952}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.80600005, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17, y: 14}
-  m_SizeDelta: {x: 34, y: 82}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_LocalEulerAnglesHint: {x: 0, y: -6.217, z: 0}
+  m_AnchorMin: {x: 0.85877794, y: 0.13122013}
+  m_AnchorMax: {x: 1, y: 0.878}
+  m_AnchoredPosition: {x: 8.099976, y: 18.549995}
+  m_SizeDelta: {x: 49.500053, y: 83.299995}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!33 &1442361978
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32801,12 +32805,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0726ca5f4c23646a4bce6a4b5b53a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NabihRender: {fileID: 0}
+  NabihRender: {fileID: 564147610}
   dialog:
   - Name: Nabih
     Sentences:
     - "Sara ! Tu n'as pas fait attention que tu as pass\xE9 toute la journ\xE9e devant
-      votre portable 1  "
+      votre portable  "
   - Name: Sara
     Sentences:
     - "Oui, j'ai vu des videos et aussi j'ai jou\xE9 des jeux en ligne   "
@@ -32824,7 +32828,7 @@ MonoBehaviour:
     - 'Tres bien, maitenant je te veux de me repondre a quelques questions '
   - Name: Sara
     Sentences:
-    - D'accord
+    - D'accord          .
   PlaceTitle: {fileID: 740778067}
   PlaceSentence: {fileID: 614773345}
   audioSource: {fileID: 682552582}
