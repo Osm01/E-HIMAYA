@@ -26,6 +26,7 @@ public class Quizmanager : MonoBehaviour
     public GameObject PanelForXO;
     public Text txtCorrection;
     public int XO_Show = 0;
+    public GameObject PanelGameOver;
     TicTacToeManager ticTac;
     private void Start()
     {
@@ -33,7 +34,8 @@ public class Quizmanager : MonoBehaviour
         GenerateQuestion();
         TotalQuestions = QnA.Count;
         GoPanel.SetActive(false);
-        for (int i=0;i<ListCorrectPos.Length;i++)
+        PanelGameOver.SetActive(false);
+        for (int i = 0; i < ListCorrectPos.Length; i++)
         {
             var MainColorAnswer = ListCorrectPos[i].GetComponent<Image>().color;
             MainColorAnswer.a = 0f;
@@ -50,15 +52,15 @@ public class Quizmanager : MonoBehaviour
         score += 1;
         QnA.RemoveAt(CurrentQuestion);
         GenerateQuestion();
-      
+
     }
-  public void GameOver()
+    public void GameOver()
     {
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
         ScoreTxt.text = score + "/" + TotalQuestions;
     }
-    
+
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -66,9 +68,15 @@ public class Quizmanager : MonoBehaviour
     public void Wrong()
     {
         XO_Show++;
-        if(XO_Show>=3 && ticTac.XO)
+        if (XO_Show >= 3 && ticTac.XO)
         {
             PanelForXO.SetActive(true);
+            XO_Show = 0;
+        }
+        else if (XO_Show >= 3 && !ticTac.XO)
+        {
+            //Game over
+            PanelGameOver.SetActive(true);
         }
         QnA.RemoveAt(CurrentQuestion);
         GenerateQuestion();
@@ -76,45 +84,38 @@ public class Quizmanager : MonoBehaviour
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
-            {
-            
+        {
+
             options[i].GetComponent<AnswerScript001>().isCorrect = false;
 
-           //options[i].GetComponent<AnswerScript>().IsCorrect = false;
-
-           
+            //options[i].GetComponent<AnswerScript>().IsCorrect = false;
 
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[CurrentQuestion].Answers[i];
-            if(QnA[CurrentQuestion].CorrectAnswer == i+1)
+            if (QnA[CurrentQuestion].CorrectAnswer == i + 1)
             {
 
                 options[i].GetComponent<AnswerScript001>().isCorrect = true;
 
-               // options[i].GetComponent<AnswerScript>().IsCorrect = true;
-
-                
+                // options[i].GetComponent<AnswerScript>().IsCorrect = true;
             }
-            }
+        }
     }
-  
+
     void GenerateQuestion()
     {
-        if(QnA.Count > 0 )
+        if (QnA.Count > 0)
         {
             CurrentQuestion = Random.Range(0, QnA.Count);
             QuestionTxt.text = QnA[CurrentQuestion].Question;
             SetAnswers();
-            
+
         }
         else
         {
             Debug.Log("Out of Question");
             GameOver();
         }
-        
-
-        
     }
-    
+
 }
 

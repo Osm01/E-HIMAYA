@@ -67,4 +67,22 @@ public class MainSceneManager : MonoBehaviour
         ButtonQuit.SetActive(false);
         ButtonSetting.SetActive(false);
     }
+    public void Retry()
+    {
+        Debug.Log("Load this scene");
+        LoadSceneByIndex(0);
+    }
+    public void Cancel()
+    {
+        PanelQuitDef.SetActive(false);
+        Color color = MainPanel.GetComponent<Image>().color;
+        color.a = 1f;
+        MainPanel.GetComponent<Image>().color = color;
+        ButtonQuit.SetActive(true);
+        ButtonSetting.SetActive(true);
+    }
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
 }

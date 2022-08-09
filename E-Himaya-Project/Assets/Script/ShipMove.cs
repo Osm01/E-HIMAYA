@@ -21,7 +21,7 @@ public class ShipMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Move Ship
+        //Change to Second camera by distance 
 
         if (Vector3.Distance(SpaceShip.position, SystelSolor.position) < dis)
         {
